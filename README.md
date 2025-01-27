@@ -1,8 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-m6joVjf)
 
 # OOP 2025 Portfolio
-## Your Name
-### Your Group CSA/CSB/CSC/CDD/CDE/FSA/FSB/FSC/FSD/FSE  -- delete as appropriate
+## Daniel Dunne
+### FS4A 
 ### Your Tutor Duncan/Patrick/Shakeel/Hrishi/Satish -- delete as appropriate
 
 change "todo" to "completed ontime" or "completed late" when done\
@@ -11,11 +11,11 @@ results for each exercise must also be documented in results.md is the relevant 
 ## Work Schedule
 **1 Getting Started**\
 **committed by 10th February**\
-1 Hello World        -- to do\
-2 Test               -- to do\
-3 Personal Details   -- to do\
-4 Diamonds           -- to do\
-5 Questions          -- to do
+1 Hello World        -- completed ontime\
+2 Test               -- completed ontime\
+3 Personal Details   -- completed ontime\
+4 Diamonds           -- completed ontime\
+5 Questions          -- completed ontime
 
 **2 Data and Expressions**\
 **committed by 17th February**\
