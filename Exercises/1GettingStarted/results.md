@@ -2,11 +2,11 @@
 
 **to be committed by 10th February**
 
-1 Hello World        ${\color{green}-- todo}$\
-2 Test               ${\color{green}-- todo}$\
-3 Personal Details   ${\color{green}-- todo}$\
-4 Diamonds           ${\color{green}-- todo}$\
-5 Questions          ${\color{green}-- todo}$
+1 Hello World        ${\color{blue}-- completed}$
+2 Test               ${\color{blue}-- completed}$
+3 Personal Details   ${\color{blue}-- completed}$
+4 Diamonds           ${\color{blue}-- completed}$
+5 Questions          ${\color{blue}-- completed}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 
