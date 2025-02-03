@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/1GettingStarted" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/2DataAndExpressions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/3SelectionAndIteration" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/4ClassesAndObjects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/5_6WritingClassesAndMethods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/7Inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/8Polymorphism" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/9FurtherArrays" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
