@@ -9,7 +9,7 @@ public class PunctuationSentenceCounter {
 
 
 
-        for (int i = 0; i < c.length(); i++) {
+        for (int i = 0; i < phrase.length(); i++) {
             if (phrase.charAt(i) == '!') {
                 punctuationCount++;
                 if (phrase.charAt(i) == ',') {
