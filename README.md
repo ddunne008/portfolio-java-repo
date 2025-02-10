@@ -19,11 +19,11 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **2 Data and Expressions**\
 **committed by 17th February**\
-1 Table of Student Grades  -- to do\
-2 Computing Averages       -- to do\
-3 Miles to Kilometers      -- to do\
-4 Square Calculation       -- to do\
-5 Fraction -- to do        -- to do
+1 Table of Student Grades  -- completed ontime\
+2 Computing Averages       -- completed ontime\
+3 Miles to Kilometers      -- completed ontime\
+4 Square Calculation       -- completed ontime\
+5 Fraction -- to do        -- completed ontime\
 
 **3 Selection and Iteration**\
 **committed by 24th February**\
