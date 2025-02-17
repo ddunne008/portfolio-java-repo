@@ -2,10 +2,10 @@
 
 **to be committed by 24th February**
 
-1 Computing A Pay Increase   ${\color{green}-- todo}$\
-2 Rock, Paper, Scissors               ${\color{green}-- todo}$\
-3 String Reverser   ${\color{green}-- todo}$\
-4 Punctuation Marks  ${\color{green}-- todo}$
+1 Computing A Pay Increase   ${\color{blue}-- completed}$\
+2 Rock, Paper, Scissors      ${\color{blue}-- completed}$\
+3 String Reverser   ${\color{blue}-- completed}$\
+4 Punctuation Marks  ${\color{blue}-- completed}$
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 
