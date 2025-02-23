@@ -3,27 +3,14 @@ public class PunctuationSentenceCounter {
 
         int punctuationCount = 0;
         String phrase;
-        char c;
         phrase = "Mary had a little lamb, her fleece was as white as snow, and everywhere Mary went, the lamb was sure to go. -that was a nice poem- the end. .";
 
 
 
 
-        for (int i = 0; i < phrase.length(); i++) {
-            if (phrase.charAt(i) == '!') {
+        for (int c = 0; c < phrase.length(); c++) {
+            if (phrase.charAt(c) == '!' || c == ',' || c == '.' || c == '!' || c == '-' || c == '_') {
                 punctuationCount++;
-                if (phrase.charAt(i) == ',') {
-                    punctuationCount++;
-                    if (phrase.charAt(i) == '.') {
-                        punctuationCount++;
-                        if (phrase.charAt(i) == '-') {
-                            punctuationCount++;
-                            if (phrase.charAt(i) == '"') {
-                                punctuationCount++;
-                            }
-                        }
-                    }
-                }
 
             }
 
