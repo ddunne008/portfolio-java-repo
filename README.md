@@ -27,10 +27,10 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **3 Selection and Iteration**\
 **committed by 24th February**\
-1 Computing a Pay Increase   -- to do\
-2 Rock, Paper, Scissors      -- to do\
-3 String Reverser            -- to do\
-4 Punctuation Marks          -- to do
+1 Computing a Pay Increase   -- completed ontime\
+2 Rock, Paper, Scissors      -- completed ontime\
+3 String Reverser            -- completed ontime\
+4 Punctuation Marks          -- completed ontime\
 
 **4 Classes and Objects**\
 **committed by 3rd March**\
