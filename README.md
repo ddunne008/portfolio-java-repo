@@ -23,7 +23,7 @@ results for each exercise must also be documented in results.md is the relevant 
 2 Computing Averages       -- completed ontime\
 3 Miles to Kilometers      -- completed ontime\
 4 Square Calculation       -- completed ontime\
-5 Fraction -- to do        -- completed ontime\
+5 Fraction                 -- completed ontime\
 
 **3 Selection and Iteration**\
 **committed by 24th February**\
