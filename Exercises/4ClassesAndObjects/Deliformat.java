@@ -19,7 +19,7 @@ public class Deliformat {
         Scanner scan = new Scanner(System.in);
 
 
-        System.out.println("Welcome to the CS Deli!! /n" );
+        System.out.println("Welcome to the CS Deli!!" );
 
 
 
@@ -35,5 +35,7 @@ public class Deliformat {
 
         weight = weightOunces / OUNCES_PER_POUND;
         totalPrice = pricePerPound * weight;
+
+        System.out.println("The total price is: " + totalPrice);
     }
 }
