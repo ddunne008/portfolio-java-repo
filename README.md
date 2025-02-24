@@ -34,10 +34,10 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **4 Classes and Objects**\
 **committed by 3rd March**\
-1 Using String Objects     -- to do\
-2 Dice                     -- to do\
-3 Formatting Output        -- to do\
-4 Pin Encryption           -- to do\
+1 Using String Objects     -- completed ontime\
+2 Dice                     -- completed ontime\
+3 Formatting Output        -- completed ontime\
+4 Pin Encryption           -- completed ontime\
 5 Sphere Calculation       -- to do
 
 **5 and 6 Writing Classes and Methods**\
