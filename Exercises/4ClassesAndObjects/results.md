@@ -6,7 +6,7 @@
 2 Dice               ${\color{blue}-- completed}
 3 Formatting Output   ${\color{blue}-- completed}
 4 Pin Encryption  ${\color{blue}-- completed}
-5 Sphere Calculations ${\color{green}-- todo}$
+5 Sphere Calculations ${\color{blue}-- completed}
 
 Please replace ${\color{green}-- todo}$ with ${\color{blue}-- completed}$ once done.
 
@@ -62,6 +62,9 @@ Process finished with exit code 0
 
 5 -
 
+Enter radius: 12
+The Volume of the sphere is 7234.56
+The Surface area of the sphere is 1808.64
 
 ---
 
