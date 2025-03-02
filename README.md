@@ -38,7 +38,7 @@ results for each exercise must also be documented in results.md is the relevant 
 2 Dice                     -- completed ontime\
 3 Formatting Output        -- completed ontime\
 4 Pin Encryption           -- completed ontime\
-5 Sphere Calculation       -- to do
+5 Sphere Calculation       -- completed ontime\
 
 **5 and 6 Writing Classes and Methods**\
 **committed by 17th March**\
