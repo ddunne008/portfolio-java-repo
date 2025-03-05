@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Exercises/2DataAndExpressions" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercises/3SelectionAndIteration" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercises/4ClassesAndObjects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercises/5_6WritingClassesAndMethods" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
