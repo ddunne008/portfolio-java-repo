@@ -17,14 +17,15 @@ public class Book {
         return output;
     }
 
-    public class BookInfo {
+    public static class BookInfo {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter title: ");
-            String title = sc.nextLine();
+            String tittle = sc.nextLine();
             System.out.print("Enter author: ");
             String author = sc.nextLine();
             System.out.print("Enter publisher: ");
+            sc.close();
 
             Book BookDetails = new Book();
             System.out.println(BookDetails);

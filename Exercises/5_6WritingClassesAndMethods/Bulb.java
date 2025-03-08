@@ -1,33 +1,39 @@
 public class Bulb {
-    public Boolean condition;
+    private Boolean condition;
 
     Bulb() {
 
-        condition = Boolean.FALSE;
+        condition = false;
 
     }
 
     void turnOn() {
-        this.condition = Boolean.TRUE;
+        this.condition = true;
 
     }
+
     void turnOff() {
-        this.condition = Boolean.FALSE;
+        this.condition = false;
 
     }
 
     Boolean getCondition() {
         return this.condition;
     }
-    public class Main {
-        public static void main(String[] args) {
-            Bulb bulb = new Bulb();
-            System.out.println(bulb.getCondition());
 
 
+    public static void main(String[] args) {
+        Bulb bulb = new Bulb();
+        System.out.println(bulb.getCondition());
+        System.out.println("Current condition:" + bulb.getCondition());
+        bulb.turnOn();
+        System.out.println("When turned on: " + bulb.getCondition());
+        bulb.turnOff();
+        System.out.println("When turned off: " + bulb.getCondition());
 
-        }
+
     }
+
 
 
 }
