@@ -1,18 +1,17 @@
 import java.text.NumberFormat;
-
 public class Account {
     private final double RATE = 0.035;
-
     private String name;
     private long accountNumber;
     private double balance;
-
+    private double initial;
+    private long account;
+    private String owner;
 
     public Account(String name, long accountNumber, double balance) {
-
-        name = owner;
-        accountNumber = account;
-        balance = initial;
+        this.name = owner;
+        this.accountNumber = account;
+        this.balance = initial;
 
     }
 
@@ -26,7 +25,7 @@ public class Account {
     }
 
     public double withdraw(double amount, double fee) {
-        if (amount+fee > 0 && amount+fee < balance);
+        if (amount + fee > 0 && amount + fee < balance);
         balance = balance - amount - fee;
 
         return balance;
