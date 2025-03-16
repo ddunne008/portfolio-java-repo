@@ -42,11 +42,11 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **5 and 6 Writing Classes and Methods**\
 **committed by 17th March**\
-1 Sphere       -- to do\
-2 Books        -- to do\
-3 Bulb         -- to do\
-4 Accounts     -- to do\
-5 Cards        -- to do
+1 Sphere       -- completed ontime\
+2 Books        -- completed ontime\
+3 Bulb         -- completed ontime\
+4 Accounts     -- completed ontime\
+5 Cards        -- completed ontime\
 
 **7 Inheritance**\
 **committed by 24th March**\
