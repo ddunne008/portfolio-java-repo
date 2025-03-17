@@ -46,8 +46,10 @@ public class Staff
 
             if (amount == 0.0)
                 System.out.println("Thanks!");
-            else
+
+
                 System.out.println("Paid: " + amount);
+
 
             System.out.println("-----------------------------------");
         }
