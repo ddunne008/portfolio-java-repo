@@ -14,7 +14,7 @@ public class Hospital {
         this.employeeNo = employeeNo;
         this.jobRole = "Nurse";
         this.patientCount = patientsCount;
-        this.specialty = "N/A";
+        this.specialty = "n/a";
         this.isIntern = isIntern;
 
     }
@@ -24,7 +24,7 @@ public class Hospital {
         this.employeeNo = employeeNo;
         this.jobRole = "Doctor";
         this.patientCount = 0;
-        this.specialty = "N/A";
+        this.specialty = "n/a";
         this.isIntern = isIntern;
 
     }
@@ -33,7 +33,7 @@ public class Hospital {
         this.name = name;
         this.employeeNo = employeeNo;
         this.jobRole = "Cleaner";
-        this.specialty = "N/A";
+        this.specialty = "n/a";
         this.department = department;
         this.patientCount = 0;
 
@@ -43,7 +43,7 @@ public class Hospital {
         this.name = name;
         this.employeeNo = employeeNo;
         this.jobRole = "Receptionist";
-        this.specialty = "N/A";
+        this.specialty = "n/a";
         this.department = department;
         this.patientCount = 0;
         this.isIntern = isIntern;
@@ -64,6 +64,7 @@ public class Hospital {
         if (jobRole.equals("Nurse")) {
             System.out.println("Is Intern : " + isIntern);
         }
+
         System.out.println("********************************");
     }
 }
