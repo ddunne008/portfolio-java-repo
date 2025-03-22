@@ -12,6 +12,13 @@ public class PlayerStats {
 
     }
 
+    public footballCalc() {
+
+    }
+    public String getPlayer() {
+        return player;
+
+    }
     public int getScore() {
 
         return score;
