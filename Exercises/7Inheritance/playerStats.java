@@ -3,25 +3,30 @@ public class PlayerStats {
     protected String player;
     protected String team;
     protected int score;
+    int totalPlayerScore;
 
-    public Stats(String player, String team) {
 
-        player = this.player;
-        team = this.team;
-        score = 0;
+    public PlayerStats(String player, String team) {
 
-    }
-
-    public footballCalc() {
+        this.player = player;
+        this.team = team;
+        this.score = 0;
 
     }
+
     public String getPlayer() {
-        return player;
+        return this.player;
 
     }
+
+    public String getTeam() {
+        return this.team;
+    }
+
+
     public int getScore() {
 
-        return score;
+        return this.score;
 
     }
 
