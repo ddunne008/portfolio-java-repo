@@ -4,31 +4,23 @@ public class PlayerStats {
     protected String team;
     protected int score;
     int totalPlayerScore;
+    String typeOfSport;
 
 
-    public PlayerStats(String player, String team) {
+    public PlayerStats(String player, String team, int score, String typeOfSport) {
 
         this.player = player;
         this.team = team;
         this.score = 0;
+        this.typeOfSport = typeOfSport;
+
 
     }
 
-    public String getPlayer() {
-        return this.player;
-
+    public String getPlayerStats(String player, String team, String score, String typeOfSport) {
+        return player + "\t" + team + "\t" + score + "\t" + typeOfSport;
     }
 
-    public String getTeam() {
-        return this.team;
-    }
-
-
-    public int getScore() {
-
-        return this.score;
-
-    }
 
     public String toString () {
 
