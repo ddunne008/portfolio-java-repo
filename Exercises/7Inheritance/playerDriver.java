@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class playerDriver {
     public static void main(String[] args) {
 
-        PlayerStats p1 = new PlayerStats("Johnathan Wild-man", "SHEFFIELD", 5, "Football");
-        PlayerStats pl1 = new PlayerStats("Johnathan Wild-man", "SHEFFIELD", 3, "Cricket" );
-        PlayerStats p2 = new PlayerStats("Max Wilson", "LEEDS", 7, "Netball");
-        PlayerStats p3 = new PlayerStats("Gerald Green", "NEWCASTLE", 2, "Basketball");
-        PlayerStats pl3 = new PlayerStats("Gerald Green", "NEWCASTLE", 6, "Football");
+        playerStats p1 = new playerStats("Johnathan Wild-man", "SHEFFIELD", 5, "Football");
+        playerStats pl1 = new playerStats("Johnathan Wild-man", "SHEFFIELD", 3, "Cricket" );
+        playerStats p2 = new playerStats("Max Wilson", "LEEDS", 7, "Netball");
+        playerStats p3 = new playerStats("Gerald Green", "NEWCASTLE", 2, "Basketball");
+        playerStats pl3 = new playerStats("Gerald Green", "NEWCASTLE", 6, "Football");
 
 
         Scanner sc = new Scanner(System.in);
@@ -29,19 +29,9 @@ public class playerDriver {
             System.out.println(pl1);
         } else if (name.equals("Gerald Green")) {
             System.out.println(pl3);
-        } else {
-            System.out.println("No player was found");
-
-            sc.close();
         }
 
-
-
-
-
-
-
-
+            sc.close();
 
 
     }

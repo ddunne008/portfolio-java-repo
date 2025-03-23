@@ -1,4 +1,4 @@
-public class PlayerStats {
+public class playerStats {
 
     protected String player;
     protected String team;
@@ -7,7 +7,7 @@ public class PlayerStats {
     String typeOfSport;
 
 
-    public PlayerStats(String player, String team, int score, String typeOfSport) {
+    public playerStats(String player, String team, int score, String typeOfSport) {
 
         this.player = player;
         this.team = team;

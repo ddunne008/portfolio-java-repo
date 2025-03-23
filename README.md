@@ -50,8 +50,8 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **7 Inheritance**\
 **committed by 24th March**\
-1 Hospital            -- to do\
-2 Player Statistics   -- to do
+1 Hospital            -- completed ontime\
+2 Player Statistics   -- completed ontime\
 
 **8 Polymorphism**\
 **committed by 31st March**\
