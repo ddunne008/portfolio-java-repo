@@ -48,11 +48,24 @@ public class Employee extends StaffMember
         if (classification.equals("Full-time")) {
             totalHolidayPay = payRate * 5;
 
+
         } else if (classification.equals("Part-time")) {
             totalHolidayPay = payRate * 3;
         }
 
         return totalHolidayPay;
+    }
+
+    public int calcVacationDays() {
+        if (classification.equals("Full-time")) {
+            return 25;
+        } else if (classification.equals("Part-time")) {
+            return 15;
+
+        } else {
+            return 0;
+        }
+
     }
 
 }

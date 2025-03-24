@@ -3,6 +3,10 @@ public static void main(String[] args) {
 
     Staff personel = new Staff();
 
+
     personel.payday();
+
+    personel.displayVacationDays();
+
     }
 }

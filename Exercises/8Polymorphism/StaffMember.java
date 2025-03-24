@@ -32,13 +32,16 @@ abstract public class StaffMember
     public String toString()
     {
         String result = "Name: " + name + "\n";
-
         result += "Address: " + address + "\n";
         result += "Phone: " + phone + "\n";
         result += "Class: " + classification + "\n";
         result += "Total Holiday Pay: " + totalHolidayPay;
 
         return result;
+    }
+
+    public String getName() {
+        return name;
     }
 
     //-----------------------------------------------------------------
