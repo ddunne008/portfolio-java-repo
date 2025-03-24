@@ -1,4 +1,4 @@
-import java.awt.FlowLayout;
+import java.awt.*;
 import javax.swing.JFrame;
 import uk.ac.leedsbeckett.oop.LBUGraphics;
 
@@ -24,27 +24,60 @@ public class mainClass extends LBUGraphics
     public void processCommand(String command)      //this method must be provided because LBUGraphics will call it when it's JTextField is used
     {
         switch(command) {
-            case "pendown":
+            case "about":
+                about();
+                break;
+
+            case "pendown", "pen down":
                 setPenState(true);
                 break;
 
-            case "penup":
+            case "penup", "pen up":
                 setPenState(false);
                 break;
 
-            case "forward":
+            case "forward", "up":
                 forward(80);
                 break;
 
-            case "right":
+            case "turn right", "right":
                 right();
                 break;
 
-                case "left":
+                case "turn left", "left":
                     left();
                     break;
 
-            case "backwards", "back":
+            case "black":
+                setPenColour(Color.black);
+                break;
+
+            case "green":
+                setPenColour(Color.green);
+                break;
+
+                case "red":
+                    setPenColour(Color.red);
+                    break;
+
+            case "white":
+                setPenColour(Color.WHITE);
+                break;
+
+            case "reset":
+
+
+            case " ":
+                about();
+                break;
+
+
+
+
+
+
+
+
 
 
 
