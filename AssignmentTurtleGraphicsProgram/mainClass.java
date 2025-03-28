@@ -21,8 +21,11 @@ public class mainClass extends LBUGraphics
     }
 
 
+    int distance;
     public void processCommand(String command)      //this method must be provided because LBUGraphics will call it when it's JTextField is used
     {
+
+
         switch(command) {
             case "about":
                 about();
@@ -36,8 +39,11 @@ public class mainClass extends LBUGraphics
                 setPenState(false);
                 break;
 
-            case "forward", "up":
-                forward(80);
+            case "forward", distance:
+                if (distance == 0)
+                    forward(90);
+                else if (distance > 1)
+                    forward(distance);
                 break;
 
             case "turn right", "right":
@@ -64,12 +70,25 @@ public class mainClass extends LBUGraphics
                 setPenColour(Color.WHITE);
                 break;
 
+
             case "reset":
+                reset();
+                break;
+
+                case "clear":
+                    clear();
+                    break;
 
 
             case " ":
                 about();
                 break;
+
+
+                default:
+                    System.out.println("Unknown command: " + command + " Please try again.");
+                    break;
+
 
 
 
