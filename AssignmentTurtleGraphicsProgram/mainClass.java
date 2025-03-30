@@ -39,7 +39,7 @@ public class mainClass extends LBUGraphics
                 setPenState(false);
                 break;
 
-            case "forward", distance:
+            case "forward":
                 if (distance == 0)
                     forward(90);
                 else if (distance > 1)

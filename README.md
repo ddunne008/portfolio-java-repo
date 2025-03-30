@@ -55,8 +55,8 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **8 Polymorphism**\
 **committed by 31st March**\
-1 Firm Vacation           -- to do\
-2 Password                -- to do
+1 Firm Vacation           -- completed ontime\
+2 Password                -- completed ontime\
 
 **9 Further Arrays**\
 **committed by 7th April**\
