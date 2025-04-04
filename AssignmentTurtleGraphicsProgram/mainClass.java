@@ -1,5 +1,7 @@
 import java.awt.*;
-import javax.swing.JFrame;
+import java.io.IOException;
+import javax.swing.*;
+
 import uk.ac.leedsbeckett.oop.LBUGraphics;
 
 public class mainClass extends LBUGraphics
@@ -21,12 +23,24 @@ public class mainClass extends LBUGraphics
     }
 
 
-    int distance;
+
     public void processCommand(String command)      //this method must be provided because LBUGraphics will call it when it's JTextField is used
     {
+        String[] part = command.split(" ");
+        String inputCommand = part[0];
+        int distance = 50;
 
+        if (part.length > 1) {
+            try {
+                distance = Integer.parseInt(part[1]);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid distance, please try again");
+                return;
+            }
 
-        switch(command) {
+        }
+
+        switch(inputCommand) {
             case "about":
                 about();
                 break;
@@ -46,13 +60,14 @@ public class mainClass extends LBUGraphics
                     forward(distance);
                 break;
 
-            case "turn right", "right":
-                right();
-                break;
 
-                case "turn left", "left":
-                    left();
+                case "turn right", "right":
+                    right();
                     break;
+
+            case "turn left", "left":
+                left();
+                break;
 
             case "black":
                 setPenColour(Color.black);
@@ -62,9 +77,9 @@ public class mainClass extends LBUGraphics
                 setPenColour(Color.green);
                 break;
 
-                case "red":
-                    setPenColour(Color.red);
-                    break;
+            case "red":
+                setPenColour(Color.red);
+                break;
 
             case "white":
                 setPenColour(Color.WHITE);
@@ -75,28 +90,27 @@ public class mainClass extends LBUGraphics
                 reset();
                 break;
 
-                case "clear":
-                    clear();
-                    break;
+            case "clear":
+                clear();
+                break;
 
 
             case " ":
                 about();
                 break;
 
+            case "save":
+                try {
+                    saveFunction.saveImage(MainFrame, "output.png");
+                } catch (IOException s) {
+                    s.printStackTrace();
 
-                default:
-                    System.out.println("Unknown command: " + command + " Please try again.");
-                    break;
+                break;
+            }
 
-
-
-
-
-
-
-
-
+            default:
+                System.out.println("Unknown command: " + command + " Please try again.");
+                break;
 
 
 
