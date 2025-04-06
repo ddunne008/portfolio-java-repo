@@ -8,10 +8,17 @@ import java.io.IOException;
 public class saveFunction {
     public static void saveImage(JFrame frame, String filename) throws IOException {
 
-        BufferedImage image = new BufferedImage(frame.getWidth(), frame.getHeight(), BufferedImage.TYPE_INT_RGB);
-        Graphics g = image.getGraphics();
-        frame.paint(g);
-        g.dispose();
+        int width = frame.getWidth();
+        int height = frame.getHeight();
+
+        if (width <= 0 || height <= 0) {
+            System.out.println("Width and Height must be more than 0");
+        }
+
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics graphics = image.getGraphics();
+        frame.paint(graphics);
+        graphics.dispose();
 
         ImageIO.write(image, "png", new File(filename));
         System.out.println("Saved image as " + filename);

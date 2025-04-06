@@ -6,6 +6,9 @@ import uk.ac.leedsbeckett.oop.LBUGraphics;
 
 public class mainClass extends LBUGraphics
 {
+    public static JFrame MainFrame;
+
+
     public static void main(String[] args)
     {
         new mainClass(); //create instance of class that extends LBUGraphics (could be separate class without main), gets out of static context
@@ -94,16 +97,24 @@ public class mainClass extends LBUGraphics
                 clear();
                 break;
 
-
             case " ":
                 about();
                 break;
 
             case "save":
-                try {
-                    saveFunction.saveImage(MainFrame, "output.png");
-                } catch (IOException s) {
-                    s.printStackTrace();
+                int width = mainClass.MainFrame.getWidth();
+                int height = mainClass.MainFrame.getHeight();
+
+                if (width > 0 && height > 0) {
+                    try {
+                        saveFunction.saveImage(mainClass.MainFrame, "TGFile.png");
+                        System.out.println("Image Saved");
+                    } catch (IOException e) {
+                        System.out.println("Failed to save image: " + e.getMessage());
+                    }
+
+                } else {
+                    System.out.println("Image Not Saved, DEBUG INFO: " + width + "x" + height);
 
                 break;
             }
