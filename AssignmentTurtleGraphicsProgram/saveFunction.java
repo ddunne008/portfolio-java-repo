@@ -1,29 +1,30 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.io.*;
+
 
 public class saveFunction {
-    public static void saveImage(JFrame frame, String filename) throws IOException {
+    public static void saveImage(JComponent comp, String filename) throws IOException {
 
-        int width = frame.getWidth();
-        int height = frame.getHeight();
+        int width = comp.getWidth();
+        int height = comp.getHeight();
 
         if (width <= 0 || height <= 0) {
-            System.out.println("Width and Height must be more than 0");
+            System.out.println("The width and height are less than zero");
         }
 
-        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        Graphics graphics = image.getGraphics();
-        frame.paint(graphics);
+        BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics graphics = img.getGraphics();
+        comp.paint(graphics);
         graphics.dispose();
 
-        ImageIO.write(image, "png", new File(filename));
+        ImageIO.write(img, "png", new File(filename));
         System.out.println("Saved image as " + filename);
 
-        System.out.println("Width: " + frame.getWidth() + ", Height: " + frame.getHeight());
+
+
 
 
 
