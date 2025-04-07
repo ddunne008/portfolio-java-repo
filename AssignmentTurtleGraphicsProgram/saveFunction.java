@@ -20,6 +20,14 @@ public class saveFunction {
         comp.paint(graphics);
         graphics.dispose();
 
+        File dir = new File("images"); // This code created a directory for images so it can be saved here
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+
+        File file = new File(dir, filename);
+        ImageIO.write(img, "png", file);
+
         ImageIO.write(img, "png", new File(filename));
         System.out.println("Saved image as " + filename);
 

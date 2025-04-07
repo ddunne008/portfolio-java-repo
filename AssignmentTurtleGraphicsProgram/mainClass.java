@@ -16,6 +16,8 @@ public class mainClass extends LBUGraphics {
         new mainClass(); //create instance of class that extends LBUGraphics (could be separate class without main), gets out of static context
     }
 
+    private static final File cmdHistory = new File("cmd_history.txt");
+
     public mainClass() {
         canva = this;
 
@@ -69,14 +71,17 @@ public class mainClass extends LBUGraphics {
         switch (inputCommand) {
             case "about":
                 about();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "pendown", "pen down":
                 setPenState(true);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "penup", "pen up":
                 setPenState(false);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "forward":
@@ -84,44 +89,54 @@ public class mainClass extends LBUGraphics {
                     forward(90);
                 else if (distance > 1)
                     forward(distance);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
 
             case "turn right", "right":
                 right();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "turn left", "left":
                 left();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "black":
                 setPenColour(Color.black);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "green":
                 setPenColour(Color.green);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "red":
                 setPenColour(Color.red);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "white":
                 setPenColour(Color.WHITE);
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
 
             case "reset":
                 reset();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "clear":
                 clear();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case " ":
                 about();
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
             case "save", "copy", "download": //This code saves the image the turtle has drawn
@@ -135,35 +150,48 @@ public class mainClass extends LBUGraphics {
                             System.out.println("Image Saved");
                         } catch (IOException i) {
                             System.out.println("Failed to save image: " + i.getMessage());
+                            cmdHistoryFunction.saveCmdToLog(inputCommand);
                         }
 
                     } else {
                         System.out.println("Image Not Saved, DEBUG INFO: " + width + "x" + height);
-
+                        cmdHistoryFunction.saveCmdToLog(inputCommand);
                         break;
 
                     }
 
-                        //String parameter is the text typed into the LBUGraphics JTextfield
-                        //lands here if return was pressed or "ok" JButton clicked
+                    //String parameter is the text typed into the LBUGraphics JTextfield
+                    //lands here if return was pressed or "ok" JButton clicked
 
-                        //TO DO
+                    //TO DO
 
                 }
                 break;
 
-                case "load", "load image":
-                    if (part.length > 1) {
-                        String path = part[1];
-                        mainClass.canva.loadBackground(path);
-                    } else {
-                        System.out.println("Add a file name e.g. turtle1.PNG");
-                    }
-                    break;
+            case "load":
+                if (part.length > 1) {
+                    String filename = part[1];
+                    String path = "images/" + filename;
+                    mainClass.canva.loadBackground(path);
+                } else {
+                    System.out.println("Add a file name e.g. turtle1.PNG");
                 }
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                break;
 
-        default:
-            System.out.println("Unknown command: " + command + " Please try again.");
+            case "replay":
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                replayCmdLog.processCommand(inputCommand);
+                break;
+
+
+
+
+            default:
+                System.out.println("Unknown command: " + command + " Please try again.");
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                break;
         }
     }
 
+}
