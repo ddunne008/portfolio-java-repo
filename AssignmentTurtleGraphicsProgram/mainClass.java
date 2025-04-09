@@ -176,14 +176,14 @@ public class mainClass extends LBUGraphics {
                 } else {
                     System.out.println("Add a file name e.g. turtle1.PNG");
                 }
-                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                cmdHistoryFunction.saveCmdToLog(command);
                 break;
 
             case "replay":
-                cmdHistoryFunction.saveCmdToLog(inputCommand);
-                replayCmdLog.processCommand(inputCommand);
+                new File("history").mkdir();
+                cmdHistoryFunction.saveCmdToLog(command);
+                replayCmdLog.replay(cmd -> mainClass.canva.processCommand(cmd));
                 break;
-
 
 
 
