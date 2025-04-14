@@ -10,15 +10,12 @@ public class replayCmdLog {
         void run(String command);
     }
 
-    public static void replay(String filePath, CommandRunner runner) {
-
-
+    public static void replay(String filePath, CommandRunner runner) throws IOException {
         String command;
         File file = new File(filePath);
 
         if (!file.exists()) {
             throw new IOException("No file found");
-            System.out.println("No file path found");
             return;
         }
 
