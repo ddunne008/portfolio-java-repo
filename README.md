@@ -70,7 +70,7 @@ results for each exercise must also be documented in results.md is the relevant 
 1 Basic Application           -- completed ontime\
 2 Command Processing          -- completed ontime\
 3 Validating Commands        -- completed ontime\
-4 Loading and Saving          -- to do\
+4 Loading and Saving          -- completed ontime\
 5 Extending OOPGraphics library    -- to do\
 
 ## Notes

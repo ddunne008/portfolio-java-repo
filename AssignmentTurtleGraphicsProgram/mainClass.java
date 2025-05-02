@@ -56,13 +56,36 @@ public class mainClass extends LBUGraphics {
 
         String[] part = command.split("\\s+", 2);
         String inputCommand = part[0].toLowerCase();
-        int distance = 50;
+        int distance = 90;
         String parameter = part.length > 1 ? part[1] : "";
 
         switch (inputCommand) {
             case "about":
                 about();
                 cmdHistoryFunction.saveCmdToLog(inputCommand);
+                break;
+
+            case "move":
+                if (parameter.isEmpty()) {
+                    System.out.println("TERMINAL Missing Parameter, using Default = 90");
+                    forward(90);
+                    break;
+                }
+                try {
+                    distance = Integer.parseInt(parameter);
+
+                    if (distance == 0) {
+                        System.out.println("TERMINAL Missing parameter: Using default = 90");
+                        forward(90);
+                    } else if (distance > 200 || distance < -200) {
+                        System.out.println("TERMINAL Exceeded Parameter limit");
+                    } else {
+                        forward(distance);
+                    }
+                    cmdHistoryFunction.saveCmdToLog(inputCommand);
+                } catch (NumberFormatException e) {
+                    System.out.println("TERMINAL Invalid parameter");
+                }
                 break;
 
             case "pendown", "pen down":
@@ -76,29 +99,50 @@ public class mainClass extends LBUGraphics {
                 break;
 
             case "forward":
-                if (distance == 0) {
-                    System.out.println("TERMINAL " + command + "No parameter specified, using Default 90");
+                if (!parameter.isEmpty()) {
+                    System.out.println("TERMINAL No parameter specified, using Default 90");
                     forward(90);
-                } else if (distance > 1) {
-                    forward(distance);
-                } else if (!parameter.isEmpty()) {
-                    try {
-                        distance = Integer.parseInt(parameter);
-                    } catch (NumberFormatException e) {
-                        System.out.println("Invalid distance, please try again");
-                        return;
-                    }
+                    break;
+
                 }
-                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                try {
+                    distance = Integer.parseInt(parameter);
+
+                    if (distance == 0) {
+                        System.out.println("TERMINAL Missing parameter: Using default = 90");
+                        forward(90);
+                    } else if (distance > 200 || distance < -200) {
+                        System.out.println("TERMINAL Exceeded Parameter limit");
+                    } else{
+                        forward(distance);
+                    }
+                    cmdHistoryFunction.saveCmdToLog(inputCommand);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid parameter");
+                }
                 break;
 
+
             case "reverse":
-                if (distance == 0) {
+                if (!parameter.isEmpty()) {
+                    System.out.println("TERMINAL No parameter specified, using Default 90");
                     forward(-90);
-                } else if (distance > 1){
-                    forward(-distance);
-                } else if (distance > 200 || distance < -200) {
-                    System.out.println("TERMINAL " + command + "Is over the Parameter limit of 200, Please use a number less than 200");
+                    break;
+                }
+                try {
+                    distance = Integer.parseInt(parameter);
+
+                    if (distance == 0) {
+                        System.out.println("TERMINAL Missing parameter: Using default = 90");
+                        forward(-90);
+                    } else if (distance > 200 || distance < -200) {
+                        System.out.println("TERMINAL Exceeded Parameter limit");
+                    } else {
+                        forward(-distance);
+                    }
+                    cmdHistoryFunction.saveCmdToLog(inputCommand);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid parameter");
                 }
                 cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
