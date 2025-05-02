@@ -65,7 +65,6 @@ public class mainClass extends LBUGraphics {
                 System.out.println("Invalid distance, please try again");
                 return;
             }
-
         }
 
         switch (inputCommand) {
@@ -85,13 +84,25 @@ public class mainClass extends LBUGraphics {
                 break;
 
             case "forward":
-                if (distance == 0)
+                if (distance == 0) {
+                    System.out.println("TERMINAL " + command + "No parameter specified, using Default 90");
                     forward(90);
-                else if (distance > 1)
+                } else if (distance > 1) {
                     forward(distance);
+                }
                 cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
 
+            case "reverse":
+                if (distance == 0) {
+                    forward(-90);
+                } else if (distance > 1){
+                    forward(-distance);
+                } else if (distance > 200 || distance < -200) {
+                    System.out.println("TERMINAL " + command + "Is over the Parameter limit of 200, Please use a number less than 200");
+                }
+                cmdHistoryFunction.saveCmdToLog(inputCommand);
+                break;
 
             case "turn right", "right":
                 right();
@@ -182,13 +193,18 @@ public class mainClass extends LBUGraphics {
             case "replay":
                 new File("history").mkdir();
                 cmdHistoryFunction.saveCmdToLog(command);
-                replayCmdLog.replay(cmd -> mainClass.canva.processCommand(cmd));
+                try {
+                    replayCmdLog.replay(cmd -> mainClass.canva.processCommand(cmd));
+                } catch (IOException e) {
+                    System.out.println("Failed to replay the command: ");
+                }
+
                 break;
 
 
 
             default:
-                System.out.println("Unknown command: " + command + " Please try again.");
+                System.out.println("TERMINAL " + "Unknown command: " + command + " Please try again.");
                 cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
         }

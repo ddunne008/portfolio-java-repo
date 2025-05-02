@@ -67,8 +67,8 @@ results for each exercise must also be documented in results.md is the relevant 
 
 **Turtle Graphics Assignment**\
 **committed by 5th May 10am**\
-1 Basic Application           -- to do\
-2 Command Processing          -- to do\
+1 Basic Application           -- completed ontime\
+2 Command Processing          -- completed ontime\
 3 Validating Commands        -- to do\
 4 Loading and Saving          -- to do\
 5 Extending OOPGraphics library    -- to do\

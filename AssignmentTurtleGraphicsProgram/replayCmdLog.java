@@ -16,18 +16,20 @@ public class replayCmdLog {
 
         if (!file.exists()) {
             throw new IOException("No file found");
-            return;
         }
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file)));
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((command = br.readLine()) != null) {
                 runner.run(command);
+            }
         }
+    }
 
-        public static void replay(CommandRunner runner) throws IOException {
-            replay("history/cmd_history.txt", runner);
-        }
-
-
+    public static void replay(CommandRunner runner) throws IOException {
+        replay("history/cmd_history.txt", runner);
     }
 }
+
+
+
+
