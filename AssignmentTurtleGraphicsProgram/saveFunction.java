@@ -20,7 +20,7 @@ public class saveFunction {
         comp.paint(graphics);
         graphics.dispose();
 
-        File dir = new File("images"); // This code created a directory for images so it can be saved here
+        File dir = new File("C:/Users/ddunn/IdeaProjects/oop-portfolio-2025-ddunne008/images"); // This code created a directory for images so it can be saved here
         if (!dir.exists()) {
             dir.mkdir();
         }

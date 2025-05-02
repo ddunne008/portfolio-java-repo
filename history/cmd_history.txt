@@ -22,3 +22,64 @@ forward
 forward
 left
 forward
+clear
+pendown
+forward
+forward
+right
+white
+forward
+forward
+blue
+green
+right
+forward
+forward
+right
+forward
+clear
+load
+clear
+load
+clear
+clear
+clear
+clear
+clear
+load TGFile.png
+load tgfile.png
+images/tgfile.png
+clear
+clear
+clear
+load TGFile.png
+clear
+load TGFile.png
+clear
+pendown
+red
+forward80
+forward
+save
+clear
+clear
+clear
+clear
+load TGFile.png
+clear
+load TGFile.png
+clear
+clear
+pendown
+whitew
+whitw
+white
+forward
+right
+forward
+forward
+forward
+save
+clear
+clear
+load TGFile.png

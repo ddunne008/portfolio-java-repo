@@ -38,7 +38,7 @@ public class mainClass extends LBUGraphics {
             backgroundImage = ImageIO.read(new File(path));
             repaint();
         } catch (IOException i) {
-            System.out.println("Image could not be loaded" + i.getMessage());
+            System.out.println("Image could not be loaded");
         }
     }
 
@@ -54,18 +54,10 @@ public class mainClass extends LBUGraphics {
     public void processCommand(String command)      //this method must be provided because LBUGraphics will call it when it's JTextField is used
     {
 
-        String[] part = command.split(" ");
-        String inputCommand = part[0];
+        String[] part = command.split("\\s+", 2);
+        String inputCommand = part[0].toLowerCase();
         int distance = 50;
-
-        if (part.length > 1) {
-            try {
-                distance = Integer.parseInt(part[1]);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid distance, please try again");
-                return;
-            }
-        }
+        String parameter = part.length > 1 ? part[1] : "";
 
         switch (inputCommand) {
             case "about":
@@ -89,6 +81,13 @@ public class mainClass extends LBUGraphics {
                     forward(90);
                 } else if (distance > 1) {
                     forward(distance);
+                } else if (!parameter.isEmpty()) {
+                    try {
+                        distance = Integer.parseInt(parameter);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid distance, please try again");
+                        return;
+                    }
                 }
                 cmdHistoryFunction.saveCmdToLog(inputCommand);
                 break;
@@ -159,31 +158,29 @@ public class mainClass extends LBUGraphics {
                         try {
                             saveFunction.saveImage(mainClass.canva, "TGFile.png");
                             System.out.println("Image Saved");
-                        } catch (IOException i) {
-                            System.out.println("Failed to save image: " + i.getMessage());
-                            cmdHistoryFunction.saveCmdToLog(inputCommand);
+                        } catch (IOException e) {
+                            System.out.println("Failed to save image");
                         }
 
                     } else {
                         System.out.println("Image Not Saved, DEBUG INFO: " + width + "x" + height);
-                        cmdHistoryFunction.saveCmdToLog(inputCommand);
-                        break;
-
                     }
-
-                    //String parameter is the text typed into the LBUGraphics JTextfield
-                    //lands here if return was pressed or "ok" JButton clicked
-
-                    //TO DO
-
+                    cmdHistoryFunction.saveCmdToLog(inputCommand);
                 }
                 break;
+            //String parameter is the text typed into the LBUGraphics JTextfield
+            //lands here if return was pressed or "ok" JButton clicked
+
+            //TO DO
 
             case "load":
-                if (part.length > 1) {
-                    String filename = part[1];
-                    String path = "images/" + filename;
-                    mainClass.canva.loadBackground(path);
+                if (!parameter.isEmpty()) {
+                    BufferedImage loadedImage = loadImageFunction.loadImageFunction(parameter);
+                    if (loadedImage != null) {
+                        backgroundImage = loadedImage;
+                        repaint();
+                    }
+
                 } else {
                     System.out.println("Add a file name e.g. turtle1.PNG");
                 }
@@ -200,8 +197,6 @@ public class mainClass extends LBUGraphics {
                 }
 
                 break;
-
-
 
             default:
                 System.out.println("TERMINAL " + "Unknown command: " + command + " Please try again.");
