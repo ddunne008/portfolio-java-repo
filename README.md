@@ -3,7 +3,7 @@
 # OOP 2025 Portfolio
 ## Daniel Dunne
 ### FS4A 
-### Your Tutor Duncan/Patrick/Shakeel/Hrishi/Satish -- delete as appropriate
+### Your Tutor Kumar
 
 change "todo" to "completed ontime" or "completed late" when done\
 results for each exercise must also be documented in results.md is the relevant directory\
