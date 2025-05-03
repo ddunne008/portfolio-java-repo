@@ -124,7 +124,7 @@ public class mainClass extends LBUGraphics {
 
 
             case "reverse":
-                if (!parameter.isEmpty()) {
+                if (parameter.isEmpty()) {
                     System.out.println("TERMINAL No parameter specified, using Default 90");
                     forward(-90);
                     break;

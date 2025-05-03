@@ -3,3 +3,16 @@ right
 right
 clear
 forward
+clear
+move
+right
+right
+pendown
+move
+penup
+move
+left
+move
+move
+pendown
+reverse
