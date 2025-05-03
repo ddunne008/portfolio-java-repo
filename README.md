@@ -74,7 +74,7 @@ results for each exercise must also be documented in results.md is the relevant 
 5 Extending OOPGraphics library    -- to do\
 
 ## Notes
-Add your notes and top tips here.
+Youtube Link to Assignment Video: https://youtu.be/MOS4czR8BiU
 
 ## The small print
 The hand in dates for each weekly exercise includes the flexible deadline, as it is two weeks and not one.\
